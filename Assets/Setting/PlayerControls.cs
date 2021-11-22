@@ -49,6 +49,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ExitGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""f16569b8-44fa-40e0-8392-2d0fd9d06c2c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ReloadGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""ba15d152-0ac4-4ffc-a46f-745f39519a65"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -117,6 +133,50 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""SwitchRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f2559030-a4b6-4c63-8c63-44c5b0fe4ecc"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ExitGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e93a0f7f-3d01-4b70-8b7e-6728e8f178df"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ExitGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""72eb4c84-44b8-45f1-ac5a-4a5787209f67"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReloadGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5630b92a-c674-4e53-9f35-3b10bc4ad66b"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReloadGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -129,6 +189,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_MoveRight = m_Gameplay.FindAction("MoveRight", throwIfNotFound: true);
         m_Gameplay_SwitchLeft = m_Gameplay.FindAction("SwitchLeft", throwIfNotFound: true);
         m_Gameplay_SwitchRight = m_Gameplay.FindAction("SwitchRight", throwIfNotFound: true);
+        m_Gameplay_ExitGame = m_Gameplay.FindAction("ExitGame", throwIfNotFound: true);
+        m_Gameplay_ReloadGame = m_Gameplay.FindAction("ReloadGame", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -182,6 +244,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_MoveRight;
     private readonly InputAction m_Gameplay_SwitchLeft;
     private readonly InputAction m_Gameplay_SwitchRight;
+    private readonly InputAction m_Gameplay_ExitGame;
+    private readonly InputAction m_Gameplay_ReloadGame;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -190,6 +254,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @MoveRight => m_Wrapper.m_Gameplay_MoveRight;
         public InputAction @SwitchLeft => m_Wrapper.m_Gameplay_SwitchLeft;
         public InputAction @SwitchRight => m_Wrapper.m_Gameplay_SwitchRight;
+        public InputAction @ExitGame => m_Wrapper.m_Gameplay_ExitGame;
+        public InputAction @ReloadGame => m_Wrapper.m_Gameplay_ReloadGame;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -211,6 +277,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @SwitchRight.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSwitchRight;
                 @SwitchRight.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSwitchRight;
                 @SwitchRight.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSwitchRight;
+                @ExitGame.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnExitGame;
+                @ExitGame.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnExitGame;
+                @ExitGame.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnExitGame;
+                @ReloadGame.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReloadGame;
+                @ReloadGame.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReloadGame;
+                @ReloadGame.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReloadGame;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -227,6 +299,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @SwitchRight.started += instance.OnSwitchRight;
                 @SwitchRight.performed += instance.OnSwitchRight;
                 @SwitchRight.canceled += instance.OnSwitchRight;
+                @ExitGame.started += instance.OnExitGame;
+                @ExitGame.performed += instance.OnExitGame;
+                @ExitGame.canceled += instance.OnExitGame;
+                @ReloadGame.started += instance.OnReloadGame;
+                @ReloadGame.performed += instance.OnReloadGame;
+                @ReloadGame.canceled += instance.OnReloadGame;
             }
         }
     }
@@ -237,5 +315,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnMoveRight(InputAction.CallbackContext context);
         void OnSwitchLeft(InputAction.CallbackContext context);
         void OnSwitchRight(InputAction.CallbackContext context);
+        void OnExitGame(InputAction.CallbackContext context);
+        void OnReloadGame(InputAction.CallbackContext context);
     }
 }
