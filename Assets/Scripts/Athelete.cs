@@ -94,12 +94,19 @@ public class Athelete : MonoBehaviour
     public void onSwitchLeft(InputAction.CallbackContext ctx) => switchedLeft = checkHold(ctx.ReadValue<float>());
     public void onSwitchRight(InputAction.CallbackContext ctx) => switchedRight = checkHold(ctx.ReadValue<float>());
 
+    public void flip(InputAction.CallbackContext ctx) => flipX(GetComponentInParent<Transform>());
+
     public bool checkHold(float value)
     {
         if (value > 0.5)
             return true;
         else
             return false;
+    }
+
+    public void flipX(Transform t)
+    {
+        t.localScale = new Vector2(t.localScale.x * -1, 1);
     }
     
 }

@@ -304,8 +304,8 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.1663729, y: 0.4567721}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 3.73, z: 0, w: 0}
-    pivot: {x: 0.5000001, y: 0.50784856}
+    border: {x: 0, y: 3.86, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.52497977}
     oldSize: {x: 1.57, y: 7.35}
     newSize: {x: 1.53, y: 3.73}
     adaptiveTilingThreshold: 0.5
@@ -638,8 +638,8 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.1663729, y: 0.4567721}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 3.73, z: 0, w: 0}
-    pivot: {x: 0.5000001, y: 0.50784856}
+    border: {x: 0, y: 3.86, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.52497977}
     oldSize: {x: 1.57, y: 7.35}
     newSize: {x: 1.53, y: 3.73}
     adaptiveTilingThreshold: 0.5
@@ -798,6 +798,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ba15d152-0ac4-4ffc-a46f-745f39519a65
     m_ActionName: Gameplay/ReloadGame[/Keyboard/r,/XInputControllerWindows/select,/SwitchProControllerHID/select]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2903361285975731282}
+        m_TargetAssemblyTypeName: Athelete, Assembly-CSharp
+        m_MethodName: flip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f5e973c3-5f53-480a-9024-22c5c60cc534
+    m_ActionName: Gameplay/Flip[/XInputControllerWindows/buttonSouth,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -1545,8 +1561,8 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.1663729, y: 0.4567721}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 3.73, z: 0, w: 0}
-    pivot: {x: 0.5000001, y: 0.50784856}
+    border: {x: 0, y: 3.86, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.52497977}
     oldSize: {x: 1.57, y: 7.35}
     newSize: {x: 1.53, y: 3.73}
     adaptiveTilingThreshold: 0.5
@@ -1880,8 +1896,8 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.1663729, y: 0.4567721}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 3.73, z: 0, w: 0}
-    pivot: {x: 0.5000001, y: 0.50784856}
+    border: {x: 0, y: 3.86, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.52497977}
     oldSize: {x: 1.57, y: 7.35}
     newSize: {x: 1.53, y: 3.73}
     adaptiveTilingThreshold: 0.5
