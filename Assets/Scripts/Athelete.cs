@@ -17,6 +17,7 @@ public class Athelete : MonoBehaviour
     [SerializeField] Rigidbody2D leftLeg1, leftLeg2, rightLeg1, rightLeg2;
     private void Awake()
     {
+      /**  
         control = new PlayerControls();
 
         control.Gameplay.MoveLeft.performed += ctx => moveLeft = ctx.ReadValue<Vector2>();
@@ -30,19 +31,13 @@ public class Athelete : MonoBehaviour
 
         control.Gameplay.SwitchRight.performed += ctx => switchedRight = true;
         control.Gameplay.SwitchRight.canceled += ctx => switchedRight = false;
-
+      */
+        
 
         if (GetComponent<Rigidbody2D>() != null)
             myBody = GetComponent<Rigidbody2D>();
         else
             Debug.LogWarning("can't detect rigid body 2d in " + name);
-    }
-
-    
-    void Update()
-    {
-
-        
     }
 
     private void FixedUpdate()
@@ -90,6 +85,21 @@ public class Athelete : MonoBehaviour
 
     private void OnEnable()
     {
-        control.Gameplay.Enable();
+        //control.Gameplay.Enable();
     }
+
+    
+    public void onMoveLeft(InputAction.CallbackContext ctx) => moveLeft = ctx.ReadValue<Vector2>();
+    public void onMoveRight(InputAction.CallbackContext ctx) => moveRight = ctx.ReadValue<Vector2>();
+    public void onSwitchLeft(InputAction.CallbackContext ctx) => switchedLeft = checkHold(ctx.ReadValue<float>());
+    public void onSwitchRight(InputAction.CallbackContext ctx) => switchedRight = checkHold(ctx.ReadValue<float>());
+
+    public bool checkHold(float value)
+    {
+        if (value > 0.5)
+            return true;
+        else
+            return false;
+    }
+    
 }
