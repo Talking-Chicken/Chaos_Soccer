@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     {
         control = new PlayerControls();
 
-        //control.Gameplay.ReloadGame.performed += ctx => reloadGame();
+        control.Gameplay.ReloadGame.performed += ctx => reloadGame();
         control.Gameplay.ExitGame.performed += ctx => exitGame();
     }
 

@@ -76,7 +76,7 @@ public class Athelete : MonoBehaviour
         if (!switchedRight)
         {
             rightLeg1.constraints = RigidbodyConstraints2D.None;
-            rightLeg1.velocity = m2 * speed;
+            rightLeg1.velocity = m1 * speed;
             rightLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
             rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
@@ -84,7 +84,7 @@ public class Athelete : MonoBehaviour
         else
         {
             rightLeg2.constraints = RigidbodyConstraints2D.None;
-            rightLeg2.velocity = m2 * speed;
+            rightLeg2.velocity = m1 * speed;
             rightLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
             rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
