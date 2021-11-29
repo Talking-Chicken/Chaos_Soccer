@@ -61,12 +61,16 @@ public class Athelete : MonoBehaviour
             leftLeg1.constraints = RigidbodyConstraints2D.None;
             leftLeg1.velocity = m1 * speed;
             leftLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
+            leftLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            leftLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
         else
         {
             leftLeg2.constraints = RigidbodyConstraints2D.None;
             leftLeg2.velocity = m1 * speed;
             leftLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
+            leftLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            leftLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
 
         if (!switchedRight)
@@ -74,12 +78,16 @@ public class Athelete : MonoBehaviour
             rightLeg1.constraints = RigidbodyConstraints2D.None;
             rightLeg1.velocity = m2 * speed;
             rightLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
+            rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
         else
         {
             rightLeg2.constraints = RigidbodyConstraints2D.None;
             rightLeg2.velocity = m2 * speed;
             rightLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
+            rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 
