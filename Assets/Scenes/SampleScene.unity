@@ -1032,9 +1032,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ecb94d08f798b4199b0fb8e7b32c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soccer: {fileID: 0}
+  soccer: {fileID: 1434783284}
   left: 0
-  right: 0
+  right: 1
 --- !u!50 &914228544
 Rigidbody2D:
   serializedVersion: 4
@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soccer: {fileID: 1434783284}
-  left: 0
+  left: 1
   right: 0
 --- !u!1 &2083680371
 GameObject:
