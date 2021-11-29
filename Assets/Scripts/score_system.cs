@@ -8,6 +8,7 @@ public class score_system : MonoBehaviour
     // Start is called before the first frame update
     public GameObject soccer;
     public bool left;
+    public bool right;
     
     void Start()
     {
@@ -25,9 +26,12 @@ public class score_system : MonoBehaviour
         {
             Debug.Log("test");
             StartCoroutine(ExampleCoroutine());
-            if (left==true)
+            if (left == true)
             {
-                
+                score_update.score_left = score_update.score_left + 1;
+            }
+            if (right == true) { 
+                score_update.score_right = score_update.score_right + 1;
             }
         }
     }
@@ -38,7 +42,7 @@ IEnumerator ExampleCoroutine()
 {
 
     //yield on a new YieldInstruction that waits for 5 seconds.
-    yield return new WaitForSeconds(3);
+    yield return new WaitForSeconds(2);
         soccer.transform.position = new Vector3(-4.5f,0,0);
 }
 }
