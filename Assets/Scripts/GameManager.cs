@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour
 {
     PlayerControls control;
 
-    [SerializeField] GameObject[] goats;
-    PlayerInputManager manager;
+    
     private void Awake()
     {
         control = new PlayerControls();
@@ -20,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        manager = GetComponent<PlayerInputManager>();
+        
     }
 
     
@@ -44,8 +43,4 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void changeGoat(GameObject goat)
-    {
-        manager.playerPrefab = goat;
-    }
-}
+    
