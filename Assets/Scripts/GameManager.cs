@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     PlayerControls control;
 
-    
+
     private void Awake()
     {
         control = new PlayerControls();
@@ -19,13 +19,13 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
-    
+
     void Update()
     {
-        
+
     }
 
     private void OnEnable()
@@ -42,5 +42,6 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+}
 
     
