@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a098ef21d815a41877df5e2a065829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 2000
   leftLeg1: {fileID: 2903361285898112838}
   leftLeg2: {fileID: 2304557086657954792}
   rightLeg1: {fileID: 7902179041647936856}
