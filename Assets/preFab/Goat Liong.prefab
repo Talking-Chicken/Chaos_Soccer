@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8614474864644977426}
   - component: {fileID: 8327808027100922793}
   - component: {fileID: 4430389963311588844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Leg p2 (L1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 3555269198473891993}
   - component: {fileID: 865635295652962766}
   - component: {fileID: 679418326328731314}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Leg (R2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 2304557086657954792}
   - component: {fileID: 3510213225600993179}
   - component: {fileID: 7610833310303114826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Foot (L2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 2903361283951165549}
   - component: {fileID: 2903361283951165548}
   - component: {fileID: 2903361283951165547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Leg (L1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2903361285325708350}
   - component: {fileID: 2206721951642613150}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Liong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -713,7 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: d4990fde2d7b41c449a2fa1bfd8f920d, type: 3}
+  m_Actions: {fileID: 0}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 2903361285898112838}
   - component: {fileID: 2903361285898112837}
   - component: {fileID: 2903361285898112839}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Foot (L1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -987,7 +987,7 @@ GameObject:
   - component: {fileID: 2903361285975731283}
   - component: {fileID: 2903361285975731281}
   - component: {fileID: 2903361285975731282}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1114,7 +1114,7 @@ GameObject:
   - component: {fileID: 7902179041647936856}
   - component: {fileID: 1552440930108658225}
   - component: {fileID: 4692299569503413350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Foot (R2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1270,7 +1270,7 @@ GameObject:
   - component: {fileID: 5553933671835131991}
   - component: {fileID: 6900762334746681070}
   - component: {fileID: 5256745985500886286}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Leg p2 (R2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1428,7 +1428,7 @@ GameObject:
   - component: {fileID: 9156113421301166892}
   - component: {fileID: 4861213030741339621}
   - component: {fileID: 1573200195395104379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Leg (R1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1605,7 +1605,7 @@ GameObject:
   - component: {fileID: 3318285477741654165}
   - component: {fileID: 5146540724608108519}
   - component: {fileID: 5315602643198616965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Leg p2 (R1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1763,7 +1763,7 @@ GameObject:
   - component: {fileID: 9197035382749481388}
   - component: {fileID: 1643471786780031273}
   - component: {fileID: 2116485117087864878}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Leg (L2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1940,7 +1940,7 @@ GameObject:
   - component: {fileID: 7640086687658239302}
   - component: {fileID: 7277286630737916130}
   - component: {fileID: 2004821359036988686}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Foot (R1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2096,7 +2096,7 @@ GameObject:
   - component: {fileID: 5853607987000141846}
   - component: {fileID: 2998935431323584244}
   - component: {fileID: 8099442602969079520}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goat Leg p2 (L2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
