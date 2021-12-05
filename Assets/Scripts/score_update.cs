@@ -15,9 +15,13 @@ public class score_update : MonoBehaviour
     public TextMeshProUGUI score_1;
     public TextMeshProUGUI score_2;
     public TextMeshProUGUI count_down;
+    public Sprite draw;
+    public Sprite blue;
+    public Sprite red;
+    public GameObject result_UI;
     void Start()
     {
-        timerIsRunning = true;
+        StartCoroutine(ExampleCoroutine());
     }
 
     // Update is called once per frame
@@ -25,10 +29,24 @@ public class score_update : MonoBehaviour
     {
         score_1.text = score_left.ToString();
         score_2.text = score_right.ToString();
+        if (score_left==10)
+        {
+            result_UI.SetActive(true);
+            timerIsRunning = false;
+            result_UI.GetComponent<Image>().sprite = blue;
+        }
+        if (score_right == 10)
+        {
+            result_UI.SetActive(true);
+            timerIsRunning = false;
+            result_UI.GetComponent<Image>().sprite = red;
+        }
+
         if (timerIsRunning)
         {
             if (timeRemaining > 0)
             {
+               
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
             }
@@ -37,6 +55,22 @@ public class score_update : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                if (score_left==score_right)
+                {
+                    result_UI.SetActive(true);
+                    result_UI.GetComponent<Image>().sprite = draw;
+                }
+                if (score_right>score_left)
+                {
+                    result_UI.SetActive(true);
+                    result_UI.GetComponent<Image>().sprite = red;
+                }
+                if (score_right < score_left)
+                {
+                    result_UI.SetActive(true);
+                    result_UI.GetComponent<Image>().sprite = blue;
+                }
+
             }
         }
         void DisplayTime(float timeToDisplay)
@@ -48,5 +82,16 @@ public class score_update : MonoBehaviour
 
             count_down.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
+
+   
+    }
+    IEnumerator ExampleCoroutine()
+    {
+
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(3);
+
+        timerIsRunning = true;
     }
 }
