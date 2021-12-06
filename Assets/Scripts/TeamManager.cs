@@ -21,6 +21,7 @@ public class TeamManager : MonoBehaviour
         manager = GetComponent<PlayerInputManager>();
 
         spawnPoints = localSpawnPoints;
+        Debug.Log("spawn points have " + spawnPoints.Count);
     }
 
     
@@ -35,8 +36,8 @@ public class TeamManager : MonoBehaviour
         if (totalPlayerNum%2 == 0)
         {
             team1.Add(player.gameObject);
-            if (player.GetComponent<Athelete>() != null) {
-                player.GetComponent<Athelete>().spawnPos = spawnPoints[totalPlayerNum].transform.position;
+            if (player.gameObject.GetComponentInChildren<Athelete>() != null) {
+                player.gameObject.GetComponentInChildren<Athelete>().spawnPos = spawnPoints[totalPlayerNum].transform.position;
             } else
             {
                 Debug.LogWarning("trying to add a non-athelete goat into team 1");
@@ -44,9 +45,9 @@ public class TeamManager : MonoBehaviour
         } else
         {
             team2.Add(player.gameObject);
-            if (player.GetComponent<Athelete>() != null)
+            if (player.gameObject.GetComponentInChildren<Athelete>() != null)
             {
-                player.GetComponent<Athelete>().spawnPos = spawnPoints[totalPlayerNum].transform.position;
+                player.gameObject.GetComponentInChildren<Athelete>().spawnPos = spawnPoints[totalPlayerNum].transform.position;
             }
             else
             {
