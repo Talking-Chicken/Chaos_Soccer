@@ -15,6 +15,8 @@ public class Athelete : MonoBehaviour
     [SerializeField] private float speed;
 
     [SerializeField] Rigidbody2D leftLeg1, leftLeg2, rightLeg1, rightLeg2;
+
+    public Vector2 spawnPos;
     private void Awake()
     {
       /**  

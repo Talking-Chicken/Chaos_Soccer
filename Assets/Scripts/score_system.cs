@@ -43,6 +43,7 @@ IEnumerator ExampleCoroutine()
 
     //yield on a new YieldInstruction that waits for 5 seconds.
     yield return new WaitForSeconds(0.5f);
-        soccer.transform.position = new Vector3(-4.5f,0,0);
+        soccer.transform.position = new Vector3(-4.5f, -14.21f, 0);
+        soccer.GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0);
 }
 }
