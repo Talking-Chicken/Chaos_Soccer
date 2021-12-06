@@ -42,7 +42,7 @@ IEnumerator ExampleCoroutine()
 {
 
     //yield on a new YieldInstruction that waits for 5 seconds.
-    yield return new WaitForSeconds(1);
+    yield return new WaitForSeconds(0.5f);
         soccer.transform.position = new Vector3(-4.5f,0,0);
 }
 }
