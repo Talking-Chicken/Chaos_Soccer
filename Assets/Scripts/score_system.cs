@@ -45,5 +45,13 @@ IEnumerator ExampleCoroutine()
     yield return new WaitForSeconds(0.5f);
         soccer.transform.position = new Vector3(-4.5f, -14.21f, 0);
         soccer.GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0);
-}
+        foreach (GameObject goat in TeamManager.team1)
+        {
+            goat.transform.position=goat.GetComponentInChildren<Athelete>().spawnPos;
+        }
+        foreach (GameObject goat in TeamManager.team2)
+        {
+            goat.transform.position = goat.GetComponentInChildren<Athelete>().spawnPos;
+        }
+    }
 }
