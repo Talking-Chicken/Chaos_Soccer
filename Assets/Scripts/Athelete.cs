@@ -12,6 +12,8 @@ public class Athelete : MonoBehaviour
 
     Rigidbody2D myBody;
 
+    [SerializeField] SpriteRenderer[] spriteToFlip; 
+
     [SerializeField] private float speed;
 
     [SerializeField] Rigidbody2D leftLeg1, leftLeg2, rightLeg1, rightLeg2;
@@ -65,6 +67,13 @@ public class Athelete : MonoBehaviour
             leftLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
             leftLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             leftLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+            if (leftLeg1.velocity.normalized.x > 0.5)
+                foreach (SpriteRenderer sr in spriteToFlip)
+                    sr.flipX = true;
+            else
+                foreach (SpriteRenderer sr in spriteToFlip)
+                    sr.flipX = false;
         }
         else
         {
@@ -73,6 +82,13 @@ public class Athelete : MonoBehaviour
             leftLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
             leftLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             leftLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+            if (leftLeg2.velocity.normalized.x > 0.5)
+                foreach (SpriteRenderer sr in spriteToFlip)
+                    sr.flipX = true;
+            else
+                foreach (SpriteRenderer sr in spriteToFlip)
+                    sr.flipX = false;
         }
 
         if (!switchedRight)
@@ -82,6 +98,13 @@ public class Athelete : MonoBehaviour
             rightLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
             rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+            if (rightLeg1.velocity.normalized.x > 0.5)
+                foreach (SpriteRenderer sr in spriteToFlip)
+                    sr.flipX = true;
+            else
+                foreach (SpriteRenderer sr in spriteToFlip)
+                    sr.flipX = false;
         }
         else
         {
@@ -90,7 +113,16 @@ public class Athelete : MonoBehaviour
             rightLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
             rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+            if (rightLeg2.velocity.normalized.x > 0.5)
+                foreach (SpriteRenderer sr in spriteToFlip)
+                    sr.flipX = true;
+            else
+                foreach (SpriteRenderer sr in spriteToFlip)
+                    sr.flipX = false;
         }
+
+        
     }
 
     private void OnEnable()

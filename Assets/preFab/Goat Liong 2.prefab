@@ -1096,6 +1096,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a098ef21d815a41877df5e2a065829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frontLegBody: {fileID: 2903361285898112838}
+  spriteToFlip:
+  - {fileID: 2903361285975731283}
+  - {fileID: 2903361285898112835}
+  - {fileID: 2610072349876498856}
+  - {fileID: 4973614352091965432}
   speed: 40
   leftLeg1: {fileID: 2903361285898112838}
   leftLeg2: {fileID: 2304557086657954792}
