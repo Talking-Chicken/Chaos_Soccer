@@ -1868,7 +1868,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a1bb2ac0ad4dc04ebc31131a12b19ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 723dd97ea73b65f43885c6508935b79c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2447,7 +2447,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 79.2
+  orthographic size: 79
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4570,7 +4570,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a1bb2ac0ad4dc04ebc31131a12b19ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 723dd97ea73b65f43885c6508935b79c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5035,6 +5035,7 @@ GameObject:
   - component: {fileID: 980844533}
   - component: {fileID: 980844536}
   - component: {fileID: 980844535}
+  - component: {fileID: 980844537}
   m_Layer: 0
   m_Name: Bumper_4
   m_TagString: Untagged
@@ -5435,6 +5436,25 @@ PolygonCollider2D:
       - {x: -5.4492188, y: -9.394531}
       - {x: -2.7246094, y: -9.394531}
       - {x: -2.7148438, y: -9.384766}
+--- !u!95 &980844537
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980844532}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 014d7a46d7279204d8da2181a188813a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &987135161
 GameObject:
   m_ObjectHideFlags: 0
@@ -6673,7 +6693,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a1bb2ac0ad4dc04ebc31131a12b19ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 723dd97ea73b65f43885c6508935b79c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9824,7 +9844,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a1bb2ac0ad4dc04ebc31131a12b19ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 723dd97ea73b65f43885c6508935b79c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
