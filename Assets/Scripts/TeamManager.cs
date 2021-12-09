@@ -8,8 +8,7 @@ public class TeamManager : MonoBehaviour
     public static int totalPlayerNum = 0;
 
     public static List<GameObject> team1, team2;
-    public static List<SpawnPoint> spawnPoints;
-    public List<SpawnPoint> localSpawnPoints;
+    public List<SpawnPoint> spawnPoints;
 
     [SerializeField] GameObject[] goats;
     PlayerInputManager manager;
@@ -19,9 +18,6 @@ public class TeamManager : MonoBehaviour
         team2 = new List<GameObject>();
 
         manager = GetComponent<PlayerInputManager>();
-
-        spawnPoints = localSpawnPoints;
-        Debug.Log("spawn points have " + spawnPoints.Count);
     }
 
     
@@ -36,23 +32,9 @@ public class TeamManager : MonoBehaviour
         if (totalPlayerNum%2 == 0)
         {
             team1.Add(player.gameObject);
-            if (player.gameObject.GetComponentInChildren<Athelete>() != null) {
-                player.gameObject.GetComponentInChildren<Athelete>().spawnPos = spawnPoints[totalPlayerNum].transform.position;
-            } else
-            {
-                Debug.LogWarning("trying to add a non-athelete goat into team 1");
-            }
         } else
         {
             team2.Add(player.gameObject);
-            if (player.gameObject.GetComponentInChildren<Athelete>() != null)
-            {
-                player.gameObject.GetComponentInChildren<Athelete>().spawnPos = spawnPoints[totalPlayerNum].transform.position;
-            }
-            else
-            {
-                Debug.LogWarning("trying to add a non-athelete goat into team 2");
-            }
         }
     }
 
