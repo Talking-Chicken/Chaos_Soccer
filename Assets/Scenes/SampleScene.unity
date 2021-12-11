@@ -7167,6 +7167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soccer: {fileID: 1434783284}
+  UI: {fileID: 1979419420}
   left: 1
   right: 0
   blue_team_firework:
@@ -8816,6 +8817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soccer: {fileID: 1434783284}
+  UI: {fileID: 1979419420}
   left: 0
   right: 1
   blue_team_firework:

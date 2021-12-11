@@ -15,7 +15,16 @@ public class score_system : MonoBehaviour
     
     void Start()
     {
-     
+        for (int i = 0; i < red_team_firework.Length; i++)
+        {
+            red_team_firework[i].GetComponent<ParticleSystem>().Stop();
+        }
+        for (int i = 0; i < blue_team_firework.Length; i++)
+        {
+            blue_team_firework[i].GetComponent<ParticleSystem>().Stop();
+
+
+        }
     }
 
     // Update is called once per frame
