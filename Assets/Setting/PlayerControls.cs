@@ -67,7 +67,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Flip"",
+                    ""name"": ""Dash"",
                     ""type"": ""Button"",
                     ""id"": ""f5e973c3-5f53-480a-9024-22c5c60cc534"",
                     ""expectedControlType"": ""Button"",
@@ -325,7 +325,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Flip"",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -336,7 +336,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Flip"",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -353,7 +353,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_SwitchRight = m_Gameplay.FindAction("SwitchRight", throwIfNotFound: true);
         m_Gameplay_ExitGame = m_Gameplay.FindAction("ExitGame", throwIfNotFound: true);
         m_Gameplay_ReloadGame = m_Gameplay.FindAction("ReloadGame", throwIfNotFound: true);
-        m_Gameplay_Flip = m_Gameplay.FindAction("Flip", throwIfNotFound: true);
+        m_Gameplay_Dash = m_Gameplay.FindAction("Dash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -409,7 +409,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_SwitchRight;
     private readonly InputAction m_Gameplay_ExitGame;
     private readonly InputAction m_Gameplay_ReloadGame;
-    private readonly InputAction m_Gameplay_Flip;
+    private readonly InputAction m_Gameplay_Dash;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -420,7 +420,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @SwitchRight => m_Wrapper.m_Gameplay_SwitchRight;
         public InputAction @ExitGame => m_Wrapper.m_Gameplay_ExitGame;
         public InputAction @ReloadGame => m_Wrapper.m_Gameplay_ReloadGame;
-        public InputAction @Flip => m_Wrapper.m_Gameplay_Flip;
+        public InputAction @Dash => m_Wrapper.m_Gameplay_Dash;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -448,9 +448,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @ReloadGame.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReloadGame;
                 @ReloadGame.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReloadGame;
                 @ReloadGame.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReloadGame;
-                @Flip.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFlip;
-                @Flip.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFlip;
-                @Flip.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFlip;
+                @Dash.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -473,9 +473,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @ReloadGame.started += instance.OnReloadGame;
                 @ReloadGame.performed += instance.OnReloadGame;
                 @ReloadGame.canceled += instance.OnReloadGame;
-                @Flip.started += instance.OnFlip;
-                @Flip.performed += instance.OnFlip;
-                @Flip.canceled += instance.OnFlip;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
             }
         }
     }
@@ -488,6 +488,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnSwitchRight(InputAction.CallbackContext context);
         void OnExitGame(InputAction.CallbackContext context);
         void OnReloadGame(InputAction.CallbackContext context);
-        void OnFlip(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
     }
 }

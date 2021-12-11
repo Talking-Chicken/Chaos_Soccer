@@ -28,6 +28,8 @@ public class TeamManager : MonoBehaviour
     void Update()
     {
         changeGoat(goats[totalPlayerNum]);
+        if (totalPlayerNum > 4)
+            totalPlayerNum = 0;
     }
 
     public static void addPlayer(PlayerInput player)
@@ -38,6 +40,7 @@ public class TeamManager : MonoBehaviour
             team1.Add(player.gameObject);
             if (player.gameObject.GetComponentInChildren<Athelete>() != null) {
                 player.gameObject.GetComponentInChildren<Athelete>().spawnPos = spawnPoints[totalPlayerNum].transform.position;
+                player.gameObject.transform.position = player.gameObject.GetComponentInChildren<Athelete>().spawnPos;
             } else
             {
                 Debug.LogWarning("trying to add a non-athelete goat into team 1");
@@ -48,6 +51,7 @@ public class TeamManager : MonoBehaviour
             if (player.gameObject.GetComponentInChildren<Athelete>() != null)
             {
                 player.gameObject.GetComponentInChildren<Athelete>().spawnPos = spawnPoints[totalPlayerNum].transform.position;
+                player.gameObject.transform.position = player.gameObject.GetComponentInChildren<Athelete>().spawnPos;
             }
             else
             {

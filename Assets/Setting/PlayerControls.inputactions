@@ -54,7 +54,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Flip",
+                    "name": "Dash",
                     "type": "Button",
                     "id": "f5e973c3-5f53-480a-9024-22c5c60cc534",
                     "expectedControlType": "Button",
@@ -312,7 +312,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Flip",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -323,7 +323,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Flip",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

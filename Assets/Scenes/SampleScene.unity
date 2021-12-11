@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 480544239}
   - component: {fileID: 480544241}
   - component: {fileID: 480544240}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bumper_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1002,7 +1002,7 @@ GameObject:
   - component: {fileID: 501729953}
   - component: {fileID: 501729952}
   - component: {fileID: 501729951}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: image0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2870,7 +2870,7 @@ GameObject:
   - component: {fileID: 737971110}
   - component: {fileID: 737971109}
   - component: {fileID: 737971108}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: image0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4384,7 +4384,7 @@ GameObject:
   - component: {fileID: 768076927}
   - component: {fileID: 768076931}
   - component: {fileID: 768076930}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: image0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5805,7 +5805,7 @@ GameObject:
   - component: {fileID: 980844536}
   - component: {fileID: 980844535}
   - component: {fileID: 980844537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bumper_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7394,7 +7394,7 @@ GameObject:
   - component: {fileID: 1590166304}
   - component: {fileID: 1590166306}
   - component: {fileID: 1590166305}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bumper_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7989,7 +7989,7 @@ GameObject:
   - component: {fileID: 1882388249}
   - component: {fileID: 1882388251}
   - component: {fileID: 1882388250}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bumper_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8944,7 +8944,7 @@ GameObject:
   - component: {fileID: 2082396237}
   - component: {fileID: 2082396236}
   - component: {fileID: 2082396235}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: image0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10241,6 +10241,7 @@ GameObject:
   - component: {fileID: 2083680373}
   - component: {fileID: 2083680372}
   - component: {fileID: 2083680374}
+  - component: {fileID: 2083680375}
   m_Layer: 0
   m_Name: stadium
   m_TagString: Untagged
@@ -10320,7 +10321,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083680371}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -10341,6 +10342,47 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!60 &2083680375
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083680371}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 322.625, y: 146.03192}
+    newSize: {x: 25.81, y: 11.682553}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -123.538475, y: -0.5923004}
+      - {x: 203.38242, y: -1.8456745}
+      - {x: 117.583855, y: 190.42912}
+      - {x: -88.87228, y: 187.4332}
+    - - {x: 37.906784, y: 118.37147}
+      - {x: 241.09871, y: 118.9455}
+      - {x: 289.74182, y: -79.01573}
+      - {x: 109.45533, y: -116.83883}
+    - - {x: -201.20908, y: -55.635162}
+      - {x: 212.39034, y: -56.992043}
+      - {x: 248.94547, y: -204.7705}
+      - {x: -213.50604, y: -207.41023}
+    - - {x: -270.8442, y: -86.55158}
+      - {x: -121.05124, y: -134.5618}
+      - {x: -27.746563, y: 133.2624}
+      - {x: -197.12129, y: 173.99442}
 --- !u!1001 &696713737669057357
 PrefabInstance:
   m_ObjectHideFlags: 0
