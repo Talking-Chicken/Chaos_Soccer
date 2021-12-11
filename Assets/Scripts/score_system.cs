@@ -7,14 +7,15 @@ public class score_system : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject soccer;
+    public GameObject UI;
     public bool left;
     public bool right;
-    public GameObject[] blue_team_firework;
+    public ParticleSystem[] blue_team_firework;
     public GameObject[] red_team_firework;
     
     void Start()
     {
-        
+     
     }
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class score_system : MonoBehaviour
     {
         if (collision.gameObject.name== "Soccer ball")
         {
-            
+            UI.SetActive(false);
             StartCoroutine(ExampleCoroutine());
             if (left == true)
             {
@@ -37,7 +38,8 @@ public class score_system : MonoBehaviour
                 for (int i = 0; i < blue_team_firework.Length; i++)
                 {
                     blue_team_firework[i].GetComponent<ParticleSystem>().Play();
-                  
+                
+
                 }
             }
             if (right == true) { 
@@ -56,6 +58,16 @@ public class score_system : MonoBehaviour
     {
         Camera.main.transform.position = new Vector3(0,18,-10);
         Camera.main.orthographicSize = 80;
+        for (int i = 0; i < red_team_firework.Length; i++)
+        {
+            red_team_firework[i].GetComponent<ParticleSystem>().Stop();
+        }
+        for (int i = 0; i < blue_team_firework.Length; i++)
+        {
+            blue_team_firework[i].GetComponent<ParticleSystem>().Stop();
+
+
+        }
     }
 
 IEnumerator ExampleCoroutine()
@@ -63,6 +75,7 @@ IEnumerator ExampleCoroutine()
 
     //yield on a new YieldInstruction that waits for 2 seconds.
     yield return new WaitForSeconds(4f);
+        UI.SetActive(true);
         soccer.transform.position = new Vector3(-4.5f, -14.21f, 0);
         soccer.GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0); 
         soccer.GetComponent<Rigidbody2D>().freezeRotation = true;

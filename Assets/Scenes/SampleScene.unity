@@ -2673,6 +2673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Fireworks (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7569781104412185724, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
+      propertyPath: simulationSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7569781104412185727, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2687,7 +2691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7569781104412185727, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -37.001446
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7569781104412185727, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2722,6 +2726,11 @@ PrefabInstance:
 --- !u!1 &602175264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7569781104412185722, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
+  m_PrefabInstance: {fileID: 602175263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &602175266 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7569781104412185724, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
   m_PrefabInstance: {fileID: 602175263}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &655190739
@@ -4302,7 +4311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -37.001446
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4331,6 +4340,10 @@ PrefabInstance:
     - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098649308427575821, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
+      propertyPath: simulationSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575823, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_Name
@@ -6204,6 +6217,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7569781104412185722, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
   m_PrefabInstance: {fileID: 1524611179}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &985408268 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7569781104412185724, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
+  m_PrefabInstance: {fileID: 1524611179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1085968086
 GameObject:
   m_ObjectHideFlags: 0
@@ -6475,7 +6493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -37.001446
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6504,6 +6522,10 @@ PrefabInstance:
     - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098649308427575821, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
+      propertyPath: simulationSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575823, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_Name
@@ -6713,6 +6735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Fireworks (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7569781104412185724, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
+      propertyPath: simulationSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7569781104412185727, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6727,7 +6753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7569781104412185727, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -37.001446
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7569781104412185727, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6764,6 +6790,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7569781104412185722, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
   m_PrefabInstance: {fileID: 1373814908}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &1373814911 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7569781104412185724, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
+  m_PrefabInstance: {fileID: 1373814908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1411728220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6785,7 +6816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -37.001446
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6814,6 +6845,10 @@ PrefabInstance:
     - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098649308427575821, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
+      propertyPath: simulationSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575823, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_Name
@@ -7290,6 +7325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Fireworks
       objectReference: {fileID: 0}
+    - target: {fileID: 7569781104412185724, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
+      propertyPath: simulationSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7569781104412185727, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -7304,7 +7343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7569781104412185727, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -37.001446
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7569781104412185727, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8780,9 +8819,9 @@ MonoBehaviour:
   left: 0
   right: 1
   blue_team_firework:
-  - {fileID: 985408266}
-  - {fileID: 1373814909}
-  - {fileID: 602175264}
+  - {fileID: 985408268}
+  - {fileID: 1373814911}
+  - {fileID: 602175266}
   red_team_firework:
   - {fileID: 1411728221}
   - {fileID: 753326574}
