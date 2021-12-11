@@ -2728,11 +2728,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7569781104412185722, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
   m_PrefabInstance: {fileID: 602175263}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &602175266 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7569781104412185724, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
-  m_PrefabInstance: {fileID: 602175263}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &655190739
 GameObject:
   m_ObjectHideFlags: 0
@@ -4302,6 +4297,18 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098649308427575820, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -87.31801
       objectReference: {fileID: 0}
@@ -4342,8 +4349,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575821, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098649308427575821, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: simulationSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098649308427575821, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7098649308427575823, guid: b8946c9cdb0c7134498352ffb796c97f, type: 3}
       propertyPath: m_Name
@@ -6217,11 +6232,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7569781104412185722, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
   m_PrefabInstance: {fileID: 1524611179}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &985408268 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7569781104412185724, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
-  m_PrefabInstance: {fileID: 1524611179}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1085968086
 GameObject:
   m_ObjectHideFlags: 0
@@ -6788,11 +6798,6 @@ PrefabInstance:
 --- !u!1 &1373814909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7569781104412185722, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
-  m_PrefabInstance: {fileID: 1373814908}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1373814911 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7569781104412185724, guid: 3c2feb40bbf5a43488f229ca622e71d7, type: 3}
   m_PrefabInstance: {fileID: 1373814908}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1411728220
@@ -8821,9 +8826,9 @@ MonoBehaviour:
   left: 0
   right: 1
   blue_team_firework:
-  - {fileID: 985408268}
-  - {fileID: 1373814911}
-  - {fileID: 602175266}
+  - {fileID: 1373814909}
+  - {fileID: 985408266}
+  - {fileID: 602175264}
   red_team_firework:
   - {fileID: 1411728221}
   - {fileID: 753326574}

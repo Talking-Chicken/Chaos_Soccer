@@ -10,7 +10,7 @@ public class score_system : MonoBehaviour
     public GameObject UI;
     public bool left;
     public bool right;
-    public ParticleSystem[] blue_team_firework;
+    public GameObject[] blue_team_firework;
     public GameObject[] red_team_firework;
     
     void Start()
