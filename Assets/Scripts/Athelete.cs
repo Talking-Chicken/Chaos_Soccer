@@ -77,10 +77,12 @@ public class Athelete : MonoBehaviour
             //set dash collier
             dashCollider.SetActive(false);
 
+            /*
             leftLeg1.gameObject.layer = 6;
             leftLeg2.gameObject.layer = 6;
             rightLeg1.gameObject.layer = 6;
             rightLeg2.gameObject.layer = 6;
+            */
 
             myBody.GetComponent<SpriteRenderer>().color = Color.white;
 
@@ -143,16 +145,19 @@ public class Athelete : MonoBehaviour
             Vector2 direction;
             direction = myBody.velocity;
 
+
             leftLeg1.constraints = RigidbodyConstraints2D.None;
             leftLeg2.constraints = RigidbodyConstraints2D.None;
             rightLeg1.constraints = RigidbodyConstraints2D.None;
             rightLeg2.constraints = RigidbodyConstraints2D.None;
 
             //set all legs to not collide with bumper when dash
+            /*
             leftLeg1.gameObject.layer = 8;
             leftLeg2.gameObject.layer = 8;
             rightLeg1.gameObject.layer = 8;
             rightLeg2.gameObject.layer = 8;
+            */
 
             myBody.GetComponent<SpriteRenderer>().color = Color.red;
 
