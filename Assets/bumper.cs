@@ -9,6 +9,7 @@ public class bumper : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip clip;
     public float volume = 0.5f;
+    public GameObject star;
     void Start()
     {
         m_Animator = gameObject.GetComponent<Animator>();
@@ -25,6 +26,7 @@ public class bumper : MonoBehaviour
         {
             m_Animator.SetTrigger("hit");
             audioSource.PlayOneShot(clip, volume);
+            Instantiate(star, this.transform.position, Quaternion.identity);
         }
     }
 }
