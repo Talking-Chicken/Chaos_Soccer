@@ -21,7 +21,6 @@ public class TeamManager : MonoBehaviour
         manager = GetComponent<PlayerInputManager>();
 
         spawnPoints = localSpawnPoints;
-        Debug.Log("spawn points have " + spawnPoints.Count);
     }
 
     
