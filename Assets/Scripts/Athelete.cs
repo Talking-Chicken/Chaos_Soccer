@@ -189,7 +189,7 @@ public class Athelete : MonoBehaviour
     
     public void dash()
     {
-        if (!inDashCoolDown)
+        if (!inDashCoolDown && gameObject.active)
         {
             inDashCoolDown = true;
             isDashing = true;
