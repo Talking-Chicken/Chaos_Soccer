@@ -6494,10 +6494,10 @@ MonoBehaviour:
   - {fileID: 1158094195}
   - {fileID: 1523199564}
   goats:
-  - {fileID: 2903361285325708349, guid: 0737da6c99220bc469b90bc72e20cda0, type: 3}
   - {fileID: 2903361285325708349, guid: 2de6a09676e3aaf43888112de3dcf8bb, type: 3}
-  - {fileID: 2903361285325708349, guid: f1390194f8db3404abb3d5d8ce6400f7, type: 3}
   - {fileID: 2903361285325708349, guid: 9b9976be47d2ac346b7d7c8d62303de4, type: 3}
+  - {fileID: 2903361285325708349, guid: 0737da6c99220bc469b90bc72e20cda0, type: 3}
+  - {fileID: 2903361285325708349, guid: f1390194f8db3404abb3d5d8ce6400f7, type: 3}
 --- !u!1 &903378989
 GameObject:
   m_ObjectHideFlags: 0
