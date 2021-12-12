@@ -26,7 +26,7 @@ public class bumper : MonoBehaviour
         {
             m_Animator.SetTrigger("hit");
             audioSource.PlayOneShot(clip, volume);
-            Instantiate(star, this.transform.position, Quaternion.identity);
+            Instantiate(star, collision.transform.position, Quaternion.identity);
         }
     }
 }
