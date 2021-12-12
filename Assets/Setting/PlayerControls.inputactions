@@ -328,6 +328,44 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "start_screen",
+            "id": "c5e30d18-1987-4c73-a82f-52a09b01c56c",
+            "actions": [
+                {
+                    "name": "start_screen",
+                    "type": "Button",
+                    "id": "f934b57f-3797-4316-be96-ec264ab4240c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "32e287f3-f7c5-4dd4-a1ec-b437c73d81d0",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "start_screen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9c1ee65-a2e4-4d5c-8c99-ef1828252747",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "start_screen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

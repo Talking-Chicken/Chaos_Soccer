@@ -341,6 +341,44 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""start_screen"",
+            ""id"": ""c5e30d18-1987-4c73-a82f-52a09b01c56c"",
+            ""actions"": [
+                {
+                    ""name"": ""start_screen"",
+                    ""type"": ""Button"",
+                    ""id"": ""f934b57f-3797-4316-be96-ec264ab4240c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""32e287f3-f7c5-4dd4-a1ec-b437c73d81d0"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""start_screen"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a9c1ee65-a2e4-4d5c-8c99-ef1828252747"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""start_screen"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -354,6 +392,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_ExitGame = m_Gameplay.FindAction("ExitGame", throwIfNotFound: true);
         m_Gameplay_ReloadGame = m_Gameplay.FindAction("ReloadGame", throwIfNotFound: true);
         m_Gameplay_Dash = m_Gameplay.FindAction("Dash", throwIfNotFound: true);
+        // start_screen
+        m_start_screen = asset.FindActionMap("start_screen", throwIfNotFound: true);
+        m_start_screen_start_screen = m_start_screen.FindAction("start_screen", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -480,6 +521,39 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         }
     }
     public GameplayActions @Gameplay => new GameplayActions(this);
+
+    // start_screen
+    private readonly InputActionMap m_start_screen;
+    private IStart_screenActions m_Start_screenActionsCallbackInterface;
+    private readonly InputAction m_start_screen_start_screen;
+    public struct Start_screenActions
+    {
+        private @PlayerControls m_Wrapper;
+        public Start_screenActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @start_screen => m_Wrapper.m_start_screen_start_screen;
+        public InputActionMap Get() { return m_Wrapper.m_start_screen; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(Start_screenActions set) { return set.Get(); }
+        public void SetCallbacks(IStart_screenActions instance)
+        {
+            if (m_Wrapper.m_Start_screenActionsCallbackInterface != null)
+            {
+                @start_screen.started -= m_Wrapper.m_Start_screenActionsCallbackInterface.OnStart_screen;
+                @start_screen.performed -= m_Wrapper.m_Start_screenActionsCallbackInterface.OnStart_screen;
+                @start_screen.canceled -= m_Wrapper.m_Start_screenActionsCallbackInterface.OnStart_screen;
+            }
+            m_Wrapper.m_Start_screenActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @start_screen.started += instance.OnStart_screen;
+                @start_screen.performed += instance.OnStart_screen;
+                @start_screen.canceled += instance.OnStart_screen;
+            }
+        }
+    }
+    public Start_screenActions @start_screen => new Start_screenActions(this);
     public interface IGameplayActions
     {
         void OnMoveLeft(InputAction.CallbackContext context);
@@ -489,5 +563,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnExitGame(InputAction.CallbackContext context);
         void OnReloadGame(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+    }
+    public interface IStart_screenActions
+    {
+        void OnStart_screen(InputAction.CallbackContext context);
     }
 }
