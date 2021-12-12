@@ -24,14 +24,24 @@ public class score_update : MonoBehaviour
     public GameObject result_UI;
     public float volume = 0.5f;
     public GameObject disable_UI;
+    private bool count_down_finished;
     void Start()
     {
         StartCoroutine(ExampleCoroutine());
+        count_down_finished = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (count_down_finished==false) {
+            Object[] ob = FindObjectsOfType<Athelete>();
+            foreach(GameObject goat in ob)
+            {
+                Destroy(goat);
+            }
+
+        }
         score_1.text = score_left.ToString();
         score_2.text = score_right.ToString();
         if (score_left==10)
@@ -102,5 +112,6 @@ public class score_update : MonoBehaviour
         disable_UI.SetActive(false);
         audioSource.PlayOneShot(play_sound,volume);
         timerIsRunning = true;
+        count_down_finished = true;
     }
 }

@@ -27,7 +27,7 @@ public class Athelete : MonoBehaviour
     private AudioSource audio;
 
     [SerializeField]private bool isSpawned = false;
-    private float spawnCountDown = 3.0f;
+    private float spawnCountDown = 1.0f;
     private bool isSounded = false;
     private void Awake()
     {
