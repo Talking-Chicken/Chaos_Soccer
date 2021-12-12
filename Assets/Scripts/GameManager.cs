@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
         score_update.score_left = 0;
         score_update.score_right = 0;
+        TeamManager.totalPlayerNum = 0;
+        
     }
 
     public void exitGame()

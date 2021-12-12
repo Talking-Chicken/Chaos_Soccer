@@ -15,8 +15,10 @@ public class score_system : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip win;
     public float volume = 0.5f;
+    private bool can_score;
     void Start()
     {
+        can_score = true;
         for (int i = 0; i < red_team_firework.Length; i++)
         {
             red_team_firework[i].GetComponent<ParticleSystem>().Stop();
@@ -36,10 +38,11 @@ public class score_system : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name== "Soccer ball")
+        if (collision.gameObject.name== "Soccer ball" && can_score)
         {
             UI.SetActive(false);
             StartCoroutine(ExampleCoroutine());
+            can_score = false;
             if (left == true)
             {
                 score_update.score_left = score_update.score_left + 1;
@@ -88,6 +91,7 @@ IEnumerator ExampleCoroutine()
     //yield on a new YieldInstruction that waits for 2 seconds.
     yield return new WaitForSeconds(4f);
         UI.SetActive(true);
+        can_score = true;
         soccer.transform.position = new Vector3(-4.5f, -14.21f, 0);
         soccer.GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0); 
         soccer.GetComponent<Rigidbody2D>().freezeRotation = true;
