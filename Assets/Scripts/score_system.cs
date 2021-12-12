@@ -12,7 +12,9 @@ public class score_system : MonoBehaviour
     public bool right;
     public GameObject[] blue_team_firework;
     public GameObject[] red_team_firework;
-    
+    public AudioSource audioSource;
+    public AudioClip win;
+    public float volume = 0.5f;
     void Start()
     {
         for (int i = 0; i < red_team_firework.Length; i++)
@@ -41,9 +43,9 @@ public class score_system : MonoBehaviour
             if (left == true)
             {
                 score_update.score_left = score_update.score_left + 1;
-                Camera.main.transform.position = new Vector3(71.8f, -10f, -10);
-                Camera.main.orthographicSize = 20;
-
+                Camera.main.transform.position = new Vector3(71.8f, 0f, -10);
+                Camera.main.orthographicSize = 25;
+                audioSource.PlayOneShot(win, volume);
                 for (int i = 0; i < blue_team_firework.Length; i++)
                 {
                     blue_team_firework[i].GetComponent<ParticleSystem>().Play();
@@ -53,8 +55,9 @@ public class score_system : MonoBehaviour
             }
             if (right == true) { 
                 score_update.score_right = score_update.score_right + 1;
-                Camera.main.transform.position = new Vector3(-81.1f, -10f, -10);
-                Camera.main.orthographicSize = 20;
+                audioSource.PlayOneShot(win, volume);
+                Camera.main.transform.position = new Vector3(-81.1f, 0f, -10);
+                Camera.main.orthographicSize = 25;
                 for (int i = 0; i < red_team_firework.Length; i++)
                 {
                     red_team_firework[i].GetComponent<ParticleSystem>().Play();

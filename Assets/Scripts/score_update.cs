@@ -11,7 +11,9 @@ public class score_update : MonoBehaviour
     public static int score_right=0;
     public float timeRemaining = 120;
     public bool timerIsRunning = false;
-
+    public AudioSource audioSource;
+    public AudioClip win;
+    public AudioClip tie;
     public TextMeshProUGUI score_1;
     public TextMeshProUGUI score_2;
     public TextMeshProUGUI count_down;
@@ -19,6 +21,8 @@ public class score_update : MonoBehaviour
     public Sprite blue;
     public Sprite red;
     public GameObject result_UI;
+    public float volume = 0.5f;
+    public GameObject disable_UI;
     void Start()
     {
         StartCoroutine(ExampleCoroutine());
@@ -59,16 +63,19 @@ public class score_update : MonoBehaviour
                 {
                     result_UI.SetActive(true);
                     result_UI.GetComponent<Image>().sprite = draw;
+                    audioSource.PlayOneShot(tie, volume);
                 }
                 if (score_right>score_left)
                 {
                     result_UI.SetActive(true);
                     result_UI.GetComponent<Image>().sprite = red;
+                    audioSource.PlayOneShot(win, volume);
                 }
                 if (score_right < score_left)
                 {
                     result_UI.SetActive(true);
                     result_UI.GetComponent<Image>().sprite = blue;
+                    audioSource.PlayOneShot(win, volume);
                 }
 
             }
@@ -91,7 +98,7 @@ public class score_update : MonoBehaviour
 
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(3);
-
+        disable_UI.SetActive(false);
         timerIsRunning = true;
     }
 }
