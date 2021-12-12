@@ -14,6 +14,7 @@ public class score_update : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip win;
     public AudioClip tie;
+    public AudioClip play_sound;
     public TextMeshProUGUI score_1;
     public TextMeshProUGUI score_2;
     public TextMeshProUGUI count_down;
@@ -99,6 +100,7 @@ public class score_update : MonoBehaviour
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(3);
         disable_UI.SetActive(false);
+        audioSource.PlayOneShot(play_sound,volume);
         timerIsRunning = true;
     }
 }

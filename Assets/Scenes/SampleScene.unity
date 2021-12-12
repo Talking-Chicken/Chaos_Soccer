@@ -393,9 +393,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1d7f26c5f22744f4188d4b34e8ccbb30, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 464023ff1bcb4324c8d0f81ec7d9deda, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.305
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7669,7 +7669,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 02:00
+  m_text: 03:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d8adb88de48a94d4ea0e340a247641a6, type: 2}
   m_sharedMaterial: {fileID: -8680721198225281354, guid: d8adb88de48a94d4ea0e340a247641a6, type: 2}
@@ -7895,6 +7895,7 @@ MonoBehaviour:
   audioSource: {fileID: 242857566}
   win: {fileID: 8300000, guid: 56abdf3152d50df43b349041ab6a40c3, type: 3}
   tie: {fileID: 8300000, guid: e8de88ad1f233e9459b4faffa87d94c7, type: 3}
+  play_sound: {fileID: 8300000, guid: 1d7f26c5f22744f4188d4b34e8ccbb30, type: 3}
   score_1: {fileID: 549249624}
   score_2: {fileID: 1225509567}
   count_down: {fileID: 1306412099}

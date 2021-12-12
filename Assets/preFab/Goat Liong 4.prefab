@@ -894,6 +894,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f5e973c3-5f53-480a-9024-22c5c60cc534
     m_ActionName: Gameplay/Flip[/XInputControllerWindows/buttonSouth,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f934b57f-3797-4316-be96-ec264ab4240c
+    m_ActionName: start_screen/start_screen[/Keyboard/anyKey,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

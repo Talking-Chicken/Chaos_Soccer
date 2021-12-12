@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
     public void reloadGame()
     {
         SceneManager.LoadScene(0);
+        score_update.score_left = 0;
+        score_update.score_right = 0;
     }
 
     public void exitGame()
