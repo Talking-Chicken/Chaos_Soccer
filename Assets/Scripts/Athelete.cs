@@ -25,6 +25,10 @@ public class Athelete : MonoBehaviour
     public Vector2 spawnPos;
 
     private AudioSource audio;
+
+    [SerializeField]private bool isSpawned = false;
+    private float spawnCountDown = 3.0f;
+    private bool isSounded = false;
     private void Awake()
     {
       /**  
@@ -71,99 +75,113 @@ public class Athelete : MonoBehaviour
             rightLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
         }
 
-
-        if (!isDashing)
+        if (isSpawned)
         {
-            //set dash collier
-            dashCollider.SetActive(false);
-
-            /*
-            leftLeg1.gameObject.layer = 6;
-            leftLeg2.gameObject.layer = 6;
-            rightLeg1.gameObject.layer = 6;
-            rightLeg2.gameObject.layer = 6;
-            */
-
-            myBody.GetComponent<SpriteRenderer>().color = Color.white;
-
-            if (switchedLeft)
+            if (!isDashing)
             {
-                leftLeg1.constraints = RigidbodyConstraints2D.None;
-                leftLeg1.velocity = m1 * speed;
-                leftLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
-                leftLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-                leftLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                //set dash collier
+                dashCollider.SetActive(false);
 
-                rightLeg1.constraints = RigidbodyConstraints2D.None;
-                rightLeg1.velocity = m1 * speed;
-                rightLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
-                rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-                rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                /*
+                leftLeg1.gameObject.layer = 6;
+                leftLeg2.gameObject.layer = 6;
+                rightLeg1.gameObject.layer = 6;
+                rightLeg2.gameObject.layer = 6;
+                */
 
-                if (leftLeg1.velocity.normalized.x < 0.5)
-                    foreach (SpriteRenderer sr in spriteToFlip)
-                        sr.flipX = false;
+                myBody.GetComponent<SpriteRenderer>().color = Color.white;
+
+                if (switchedLeft)
+                {
+                    leftLeg1.constraints = RigidbodyConstraints2D.None;
+                    leftLeg1.velocity = m1 * speed;
+                    leftLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
+                    leftLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                    leftLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+                    rightLeg1.constraints = RigidbodyConstraints2D.None;
+                    rightLeg1.velocity = m1 * speed;
+                    rightLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
+                    rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                    rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+                    if (leftLeg1.velocity.normalized.x < 0.5)
+                        foreach (SpriteRenderer sr in spriteToFlip)
+                            sr.flipX = false;
+                    else
+                        foreach (SpriteRenderer sr in spriteToFlip)
+                            sr.flipX = true;
+                }
+                else if (switchedRight)
+                {
+                    leftLeg2.constraints = RigidbodyConstraints2D.None;
+                    leftLeg2.velocity = m1 * speed;
+                    leftLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
+                    leftLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                    leftLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+                    rightLeg2.constraints = RigidbodyConstraints2D.None;
+                    rightLeg2.velocity = m1 * speed;
+                    rightLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
+                    rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                    rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
+                    if (rightLeg2.velocity.normalized.x < 0.5)
+                        foreach (SpriteRenderer sr in spriteToFlip)
+                            sr.flipX = false;
+                    else
+                        foreach (SpriteRenderer sr in spriteToFlip)
+                            sr.flipX = true;
+                }
                 else
-                    foreach (SpriteRenderer sr in spriteToFlip)
-                        sr.flipX = true;
-            }
-            else if (switchedRight)
-            {
-                leftLeg2.constraints = RigidbodyConstraints2D.None;
-                leftLeg2.velocity = m1 * speed;
-                leftLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
-                leftLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-                leftLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-
-                rightLeg2.constraints = RigidbodyConstraints2D.None;
-                rightLeg2.velocity = m1 * speed;
-                rightLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
-                rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-                rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-
-                if (rightLeg2.velocity.normalized.x < 0.5)
-                    foreach (SpriteRenderer sr in spriteToFlip)
-                        sr.flipX = false;
-                else
-                    foreach (SpriteRenderer sr in spriteToFlip)
-                        sr.flipX = true;
+                {
+                    leftLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
+                    leftLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
+                    rightLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
+                    rightLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
+                    rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                    rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                    leftLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                    leftLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                }
             }
             else
             {
-                leftLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
-                leftLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
-                rightLeg1.constraints = RigidbodyConstraints2D.FreezePosition;
-                rightLeg2.constraints = RigidbodyConstraints2D.FreezePosition;
-                rightLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-                rightLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-                leftLeg1.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-                leftLeg2.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                dashCollider.SetActive(true);
+                Vector2 direction;
+                direction = myBody.velocity;
+
+
+                leftLeg1.constraints = RigidbodyConstraints2D.None;
+                leftLeg2.constraints = RigidbodyConstraints2D.None;
+                rightLeg1.constraints = RigidbodyConstraints2D.None;
+                rightLeg2.constraints = RigidbodyConstraints2D.None;
+
+                //set all legs to not collide with bumper when dash
+                /*
+                leftLeg1.gameObject.layer = 8;
+                leftLeg2.gameObject.layer = 8;
+                rightLeg1.gameObject.layer = 8;
+                rightLeg2.gameObject.layer = 8;
+                */
+
+                myBody.GetComponent<SpriteRenderer>().color = Color.red;
+
+                transform.position += new Vector3(direction.x, direction.y, 0) * 0.04f;
+
             }
-        } else
-        {
-            dashCollider.SetActive(true);
-            Vector2 direction;
-            direction = myBody.velocity;
-
-
-            leftLeg1.constraints = RigidbodyConstraints2D.None;
-            leftLeg2.constraints = RigidbodyConstraints2D.None;
-            rightLeg1.constraints = RigidbodyConstraints2D.None;
-            rightLeg2.constraints = RigidbodyConstraints2D.None;
-
-            //set all legs to not collide with bumper when dash
-            /*
-            leftLeg1.gameObject.layer = 8;
-            leftLeg2.gameObject.layer = 8;
-            rightLeg1.gameObject.layer = 8;
-            rightLeg2.gameObject.layer = 8;
-            */
-
-            myBody.GetComponent<SpriteRenderer>().color = Color.red;
-
-            transform.position += new Vector3(direction.x, direction.y, 0) * 0.04f;
-            
         }
+        else
+        {
+            spawnCountDown -= Time.deltaTime;
+            if (spawnCountDown < 0)
+                isSpawned = true;
+            if (!isSounded)
+                audio.Play();
+            isSounded = true;
+        }
+
+
     }
 
     
@@ -209,6 +227,19 @@ public class Athelete : MonoBehaviour
         audio.Play();
         yield return new WaitForSeconds(0.4f);
         isDashing = false;
+    }
+
+    public void spawnSound()
+    {
+        Debug.Log("spawinging " + name);
+        StartCoroutine(sound());
+    }
+
+    public IEnumerator sound()
+    {
+        audio.Play();
+        yield return new WaitForSeconds(0.5f);
+        isSpawned = true;
     }
 
 }
