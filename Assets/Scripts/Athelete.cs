@@ -23,6 +23,8 @@ public class Athelete : MonoBehaviour
     private bool isDashing = false;
 
     public Vector2 spawnPos;
+
+    private AudioSource audio;
     private void Awake()
     {
       /**  
@@ -46,6 +48,8 @@ public class Athelete : MonoBehaviour
             myBody = GetComponent<Rigidbody2D>();
         else
             Debug.LogWarning("can't detect rigid body 2d in " + name);
+
+        audio = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -197,6 +201,7 @@ public class Athelete : MonoBehaviour
 
     IEnumerator dashing()
     {
+        audio.Play();
         yield return new WaitForSeconds(0.4f);
         isDashing = false;
     }
